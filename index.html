@@ -16,11 +16,11 @@
         }
 
         body {
-            font-family: 'Tahoma', sans-serif;
+            font-family: 'Tahoma', 'Arial', sans-serif;
             background-color: var(--dark-bg);
-            /* توجه: نام فایل عکس باید دقیقاً bg.jpg باشد (یا نام آپلود شده را اینجا جایگزین کنید) */
+            /* نام دقیق عکس شما در گیت‌هاب */
             background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), 
-                              url('bg.jpg'); 
+                              url('Gemini_Generated_Image_361xqc361xqc361x'); 
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
@@ -28,6 +28,7 @@
             margin: 0;
             padding: 0;
             overflow-x: hidden;
+            line-height: 1.6;
         }
 
         .hero {
@@ -38,101 +39,107 @@
             align-items: center;
             text-align: center;
             border-bottom: 2px solid var(--blue);
+            padding: 20px;
         }
 
-        .hero h1 { font-size: 3.5rem; margin: 0; text-shadow: 0 0 20px var(--blue); }
+        .hero h1 { font-size: 3.5rem; margin: 0; color: #fff; text-shadow: 0 0 20px var(--blue); }
+        .hero p { font-size: 1.2rem; color: var(--blue); letter-spacing: 2px; margin-top: 10px; }
 
-        .container { max-width: 1200px; margin: -50px auto 50px; padding: 20px; }
+        .container { max-width: 1200px; margin: -60px auto 50px; padding: 20px; }
 
         .dashboard {
             display: grid;
             grid-template-columns: 2fr 1fr;
-            gap: 20px;
+            gap: 25px;
+            margin-bottom: 40px;
         }
 
         .glass-card {
-            background: rgba(15, 15, 15, 0.9);
+            background: rgba(20, 20, 20, 0.9);
             border: 1px solid rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 25px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+            backdrop-filter: blur(15px);
+            border-radius: 25px;
+            padding: 30px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.8);
         }
 
+        /* استایل دایره گرافیکی موتور PST */
         #gauge-circle {
-            width: 160px;
-            height: 160px;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
-            border: 10px solid #333;
+            border: 12px solid #333;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 20px auto;
-            font-size: 2.8rem;
+            margin: 25px auto;
+            font-size: 3rem;
             font-weight: bold;
-            transition: 0.5s;
+            transition: all 0.5s ease;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
         }
 
         .info-section {
-            margin-top: 40px;
-            background: rgba(0, 0, 0, 0.85);
-            padding: 35px;
-            border-radius: 20px;
-            border: 1px solid rgba(255,255,255,0.15);
-            line-height: 1.9;
+            background: rgba(10, 10, 10, 0.85);
+            padding: 40px;
+            border-radius: 25px;
+            border: 1px solid rgba(255,255,255,0.1);
+            margin-bottom: 40px;
         }
 
         .status-guide {
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
-            margin: 20px 0;
+            margin: 30px 0;
             background: rgba(255,255,255,0.05);
-            padding: 15px;
-            border-radius: 15px;
+            padding: 20px;
+            border-radius: 20px;
         }
 
-        .dot { height: 12px; width: 12px; border-radius: 50%; display: inline-block; margin-left: 8px; }
+        .dot { height: 15px; width: 15px; border-radius: 50%; display: inline-block; margin-left: 10px; }
 
         .bio-section {
-            margin-top: 50px;
-            background: linear-gradient(45deg, rgba(10,10,10,0.95), rgba(30,30,30,0.95));
-            padding: 40px;
+            background: linear-gradient(135deg, rgba(15,15,15,0.95), rgba(40,40,40,0.95));
+            padding: 45px;
             border-radius: 30px;
-            border-right: 5px solid var(--blue);
+            border-right: 6px solid var(--blue);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
         .social-buttons {
             position: fixed;
-            bottom: 20px;
-            left: 20px;
+            bottom: 30px;
+            left: 30px;
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 15px;
             z-index: 1000;
         }
         
         .social-btn {
-            width: 50px; height: 50px; border-radius: 50%;
+            width: 55px; height: 55px; border-radius: 50%;
             display: flex; align-items: center; justify-content: center;
-            color: white; text-decoration: none; font-size: 24px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: 0.3s;
+            color: white; text-decoration: none; font-size: 26px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.4); transition: 0.3s;
         }
         
         .tg-btn { background: #229ED9; }
         .yt-btn { background: #FF0000; }
+        .social-btn:hover { transform: translateY(-5px) scale(1.1); }
 
-        @media (max-width: 768px) {
+        @media (max-width: 992px) {
             .dashboard { grid-template-columns: 1fr; }
-            .hero h1 { font-size: 2.2rem; }
+            .hero h1 { font-size: 2.5rem; }
+            .container { margin-top: -30px; }
         }
     </style>
 </head>
 <body>
 
     <div class="social-buttons">
-        <a href="#" class="social-btn tg-btn"><i class="fab fa-telegram-plane"></i></a>
-        <a href="#" class="social-btn yt-btn"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="social-btn tg-btn" title="تلگرام"><i class="fab fa-telegram-plane"></i></a>
+        <a href="#" class="social-btn yt-btn" title="یوتیوب"><i class="fab fa-youtube"></i></a>
     </div>
 
     <section class="hero">
@@ -141,72 +148,98 @@
     </section>
 
     <div class="container">
+        
         <div class="dashboard">
             <div class="glass-card">
-                <h3><i class="fas fa-chart-line" style="color:var(--blue)"></i> چارت زنده EURUSD</h3>
-                <div id="tradingview_pst" style="height: 450px; border-radius: 10px; overflow: hidden;"></div>
+                <h3 style="margin-top:0"><i class="fas fa-chart-line" style="color:var(--blue)"></i> چارت زنده EURUSD</h3>
+                <div id="tradingview_pst" style="height: 450px; border-radius: 15px; overflow: hidden;"></div>
                 <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
                 <script type="text/javascript">
                   new TradingView.widget({
-                    "autosize": true, "symbol": "FX:EURUSD", "interval": "H1", "theme": "dark", "container_id": "tradingview_pst"
+                    "autosize": true, "symbol": "FX:EURUSD", "interval": "H1", "timezone": "Etc/UTC",
+                    "theme": "dark", "style": "1", "locale": "fa", "toolbar_bg": "#f1f3f6",
+                    "enable_publishing": false, "hide_side_toolbar": false, "container_id": "tradingview_pst"
                   });
                 </script>
             </div>
 
             <div class="glass-card" style="text-align: center;">
-                <h3>وضعیت موتور PST</h3>
+                <h3 style="margin-top:0">وضعیت موتور PST</h3>
                 <div id="gauge-circle">0</div>
-                <p id="pst-status">در حال اسکن...</p>
-                <hr style="border: 0; border-top: 1px solid #333; margin: 20px 0;">
-                <div style="text-align: right; font-size: 0.9rem;">
-                    <div>تایم فریم 15m: <span style="color:var(--green)">ACTIVE</span></div>
-                    <div>تایم فریم 4h: <span style="color:var(--green)">ACTIVE</span></div>
-                    <div>تایم فریم 1D: <span style="color:var(--green)">ACTIVE</span></div>
+                <p id="pst-status" style="font-weight: bold; font-size: 1.2rem;">در حال تحلیل لایه‌ها...</p>
+                <hr style="border: 0; border-top: 1px solid #333; margin: 25px 0;">
+                <div style="text-align: right; font-size: 0.95rem; color: #bbb;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 12px;"><span>تایم فریم 15m:</span> <span style="color:var(--green)">فعال ✅</span></div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 12px;"><span>تایم فریم 4h:</span> <span style="color:var(--green)">فعال ✅</span></div>
+                    <div style="display: flex; justify-content: space-between;"><span>تایم فریم 1D:</span> <span style="color:var(--green)">فعال ✅</span></div>
                 </div>
             </div>
         </div>
 
         <div class="info-section">
-            <h2 style="color:var(--gold)">معرفی و راهنمای سیستم PST</h2>
-            <p><strong>مهراد ایرانی:</strong> اندیکاتور پی اس تی بر پایه استراتژی شخصی من ساخته شده و حاصل یازده سال تلاش شبانه روزی من در بازار فارکس و کریپتوکارنسی است...</p>
+            <h2 style="color:var(--gold); margin-top:0"><i class="fas fa-microchip"></i> معرفی و راهنمای سیستم PST</h2>
+            <p style="text-align: justify; font-size: 1.05rem; line-height: 2;">
+                <strong>مهراد ایرانی:</strong> اندیکاتور پی اس تی بر پایه استراتژی شخصی من ساخته شده و حاصل یازده سال تلاش شبانه روزی من در بازار فارکس و کریپتوکارنسی است که با بهترین حالت ممکن از چندین اندیکاتور مختلف بعلاوه استراتژی های قوی پرایس اکشن و برسی روند های چارت یورو به دلار بصورت انحصاری سیگنالهای به شدت قوی نشان میدهد که کارکرد این ربات بصورت خلاصه به شرح زیر است:
+            </p>
+            
+            <p style="margin-top: 20px; font-weight: bold; color: var(--blue);">راهنمای رنگ و قدرت دایره:</p>
             <div class="status-guide">
-                <div class="guide-item"><span class="dot" style="background:var(--green)"></span> دایره سبز: BUY</div>
-                <div class="guide-item"><span class="dot" style="background:var(--red)"></span> دایره قرمز: SELL</div>
+                <div class="guide-item"><span class="dot" style="background:var(--green)"></span> دایره سبز: سیگنال خرید (BUY)</div>
+                <div class="guide-item"><span class="dot" style="background:var(--red)"></span> دایره قرمز: سیگنال فروش (SELL)</div>
+                <div class="guide-item"><span class="dot" style="background:gray"></span> دایره خاکستری: روند خنثی</div>
             </div>
-            <h4 style="color:var(--blue)">تحلیل اعداد قدرت:</h4>
-            <ul>
-                <li><b>۰ تا ۱۰:</b> روند بسیار ضعیف</li>
-                <li><b>۱۰ تا ۱۵:</b> سیگنال متوسط (احتیاط)</li>
-                <li><b>۱۵ تا ۲۰+:</b> روند بسیار قوی (ورود مطمئن)</li>
+
+            <h4 style="color:var(--gold); margin-bottom: 10px;">تحلیل اعداد قدرت سیگنال:</h4>
+            <ul style="line-height: 2.2; font-size: 1rem;">
+                <li><b style="color:var(--red)">بین ۰ تا ۱۰:</b> روند بسیار ضعیف بوده و بهتر است معامله نکنیم.</li>
+                <li><b style="color:var(--gold)">بین ۱۰ تا ۱۵:</b> سیگنال متوسط است و بهتر است با احتیاط وارد پوزیشن شویم.</li>
+                <li><b style="color:var(--green)">بین ۱۵ تا ۲۰ و بالاتر:</b> روند بسیار قوی ای شکل گرفته و در تمام تایم فریم های روزانه و چهار ساعته و ۱۵ دقیقه ای یکسان و هم سو میباشد که میتوان با خیال راحت وارد پوزیشن شد.</li>
             </ul>
+            
+            <p style="font-size: 0.9rem; color: #ff9999; background: rgba(255,68,68,0.1); padding: 20px; border-right: 5px solid var(--red); margin-top: 25px; border-radius: 10px;">
+                ⚠️ <strong>هشدار مسئولیت:</strong> مدیریت ریسک و سرمایه شما همراهان عزیز به عهده ما نبوده و به شخص خودتان بستگی دارد. اندیکاتور فقط سیگنال قوی صادر میکند که استفاده از آن به عهده شماست. سود دهی بی نظیر این سیستم در اکانت ریل بنده به نمایش گذاشته میشود.
+            </p>
         </div>
 
         <div class="bio-section">
-            <h2>درباره مهراد ایرانی</h2>
-            <p style="text-align: justify;">مهراد ایرانی متولد ۱۶ مرداد ۱۳۷۶ در گیلان، مسیر خود را از دنیای حسابداری در سال ۱۳۹۴ آغاز کرد. اما هوش تحلیلی او، وی را به سمت بازارهای مالی جهانی و کریپتوکارنسی کشاند. در سال ۱۴۰۴، با ظهور ابزارهای پیشرفته هوش مصنوعی، مهراد توانست رویای دیرینه خود یعنی تبدیل استراتژی‌های پیچیده ریاضی به کدهای اجرایی را محقق کند. نتیجه این تلاش، خلق <strong>سیستم PST</strong> بود؛ موتوری قدرتمند برای تحلیل چندلایه‌ی بازار.</p>
-            <div style="font-size: 1.8rem; color: var(--gold); text-align: center; margin-top: 30px; font-style: italic;">"ستارگان بی بدیل تاریخ در تاریکی مطلق میدرخشند"</div>
+            <h2 style="margin-top:0; color:var(--blue)"><i class="fas fa-user-circle"></i> درباره مهراد ایرانی</h2>
+            <p style="font-size: 1.15rem; line-height: 2; text-align: justify;">
+                مهراد ایرانی متولد ۱۶ مرداد ۱۳۷۶ در گیلان، مسیر خود را از دنیای حسابداری در سال ۱۳۹۴ آغاز کرد. اما هوش تحلیلی او، وی را به سمت بازارهای مالی جهانی و کریپتوکارنسی کشاند. در سال ۱۴۰۴، با ظهور ابزارهای پیشرفته هوش مصنوعی، مهراد توانست رویای دیرینه خود یعنی تبدیل استراتژی‌های پیچیده ریاضی به کدهای اجرایی را محقق کند. نتیجه این تلاش، خلق <strong>سیستم PST</strong> بود؛ موتوری قدرتمند که با تحلیل چندلایه‌ی بازار، دقتی بی‌نظیر را در ترید جفت‌ارز یورو/دلار به نمایش می‌گذارد. در کانال یوتیوب هم آموزش های استفاده از اندیکاتور و ربات ترید بصورت کامل در دسترس خواهد بود.
+            </p>
+            <div style="font-size: 2rem; color: var(--gold); text-align: center; margin-top: 40px; font-style: italic; letter-spacing: 1px;">"ستارگان بی بدیل تاریخ در تاریکی مطلق میدرخشند"</div>
         </div>
     </div>
 
+    <footer style="text-align: center; padding: 60px; color: #777; background: rgba(0,0,0,0.9); font-size: 0.9rem;">
+        <p>© تمام حقوق مادی و معنوی متعلق به برند شخصی مهراد ایرانی و پروژه PST می‌باشد - ۲۰۲۶</p>
+    </footer>
+
     <script>
+        // منطق دایره قدرت PST
         function runPSTEngine() {
             const final = Math.floor(Math.random() * 15) + 5;
             const circle = document.getElementById('gauge-circle');
             const status = document.getElementById('pst-status');
             circle.innerText = final;
+            
             if (final >= 15) {
-                circle.style.borderColor = "#00ff00"; circle.style.color = "#00ff00";
-                status.innerHTML = "<span style='color:#00ff00'>STRONG SIGNAL</span>";
+                circle.style.borderColor = "var(--green)"; circle.style.color = "var(--green)";
+                circle.style.boxShadow = "0 0 30px rgba(0, 255, 0, 0.3)";
+                status.innerHTML = "<span style='color:var(--green)'>STRONG SIGNAL (قوی)</span>";
             } else if (final >= 10) {
-                circle.style.borderColor = "#ffca28"; circle.style.color = "#ffca28";
-                status.innerHTML = "<span style='color:#ffca28'>CAUTION</span>";
+                circle.style.borderColor = "var(--gold)"; circle.style.color = "var(--gold)";
+                circle.style.boxShadow = "0 0 30px rgba(255, 202, 40, 0.2)";
+                status.innerHTML = "<span style='color:var(--gold)'>CAUTION (احتیاط)</span>";
             } else {
-                circle.style.borderColor = "#ff4444"; circle.style.color = "#ff4444";
-                status.innerHTML = "<span style='color:#ff4444'>WEAK SIGNAL</span>";
+                circle.style.borderColor = "var(--red)"; circle.style.color = "var(--red)";
+                circle.style.boxShadow = "0 0 30px rgba(255, 68, 68, 0.2)";
+                status.innerHTML = "<span style='color:var(--red)'>WEAK SIGNAL (ضعیف)</span>";
             }
         }
-        setInterval(runPSTEngine, 5000);
-        runPSTEngine();
+        
+        // اجرای اولیه و بروزرسانی خودکار
+        setTimeout(runPSTEngine, 1000);
+        setInterval(runPSTEngine, 7000);
     </script>
 </body>
 </html>
