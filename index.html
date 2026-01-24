@@ -18,7 +18,6 @@
         body {
             font-family: 'Tahoma', sans-serif;
             background-color: var(--dark-bg);
-            /* استفاده از یک عکس جایگزین معتبر و با کیفیت مرتبط با ترید */
             background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), 
                               url('https://images.unsplash.com/photo-1642790106117-e829e14a795f?q=80&w=2000');
             background-size: cover;
@@ -94,7 +93,7 @@
 
         .info-section {
             margin-top: 40px;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.75);
             padding: 30px;
             border-radius: 20px;
             border: 1px solid rgba(255,255,255,0.1);
@@ -115,19 +114,14 @@
 
         .bio-section {
             margin-top: 50px;
-            background: linear-gradient(45deg, rgba(10,10,10,0.9), rgba(30,30,30,0.9));
+            background: linear-gradient(45deg, rgba(10,10,10,0.95), rgba(30,30,30,0.95));
             padding: 40px;
             border-radius: 30px;
             border-right: 5px solid var(--blue);
             backdrop-filter: blur(10px);
         }
 
-        @media (max-width: 768px) {
-            .dashboard { grid-template-columns: 1fr; }
-            .hero h1 { font-size: 2.2rem; }
-        }
-        
-        /* دکمه‌های شناور تلگرام و یوتیوب */
+        /* دکمه‌های شناور */
         .social-buttons {
             position: fixed;
             bottom: 20px;
@@ -155,6 +149,12 @@
         .tg-btn { background: #229ED9; }
         .yt-btn { background: #FF0000; }
         .social-btn:hover { transform: scale(1.1); }
+
+        @media (max-width: 768px) {
+            .dashboard { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2.2rem; }
+            .container { margin-top: -30px; }
+        }
     </style>
 </head>
 <body>
@@ -202,21 +202,33 @@
 
         <div class="info-section">
             <h2 style="color:var(--gold)"><i class="fas fa-microchip"></i> معرفی و راهنمای سیستم PST</h2>
-            <p style="line-height: 1.8; text-align: justify;">
-                <strong>مهراد ایرانی:</strong> اندیکاتور پی اس تی بر پایه استراتژی شخصی من ساخته شده و حاصل یازده سال تلاش شبانه روزی من در بازار فارکس و کریپتوکارنسی است.
+            <p style="line-height: 1.9; text-align: justify;">
+                <strong>مهراد ایرانی:</strong> اندیکاتور پی اس تی بر پایه استراتژی شخصی من ساخته شده و حاصل یازده سال تلاش شبانه روزی من در بازار فارکس و کریپتوکارنسی است که با بهترین حالت ممکن از چندین اندیکاتور مختلف بعلاوه استراتژی های قوی پرایس اکشن و برسی روند های چارت یورو به دلار بصورت انحصاری سیگنالهای به شدت قوی نشان میدهد که کارکرد این ربات بصورت خلاصه به شرح زیر است:
             </p>
             
+            <p style="margin-top: 15px;">عددی که میبینید داخل دایره نوشته میشود قدرت سیگنال را نمایش میدهد و رنگ آن جهت سیگنال را مشخص میسازد:</p>
             <div class="status-guide">
-                <div class="guide-item"><span class="dot" style="background:var(--green)"></span> خرید (BUY)</div>
-                <div class="guide-item"><span class="dot" style="background:var(--red)"></span> فروش (SELL)</div>
-                <div class="guide-item"><span class="dot" style="background:gray"></span> روند خنثی</div>
+                <div class="guide-item"><span class="dot" style="background:var(--green)"></span> دایره سبز: سیگنال BUY</div>
+                <div class="guide-item"><span class="dot" style="background:var(--red)"></span> دایره قرمز: سیگنال SELL</div>
+                <div class="guide-item"><span class="dot" style="background:gray"></span> دایره خاکستری: روند خنثی</div>
             </div>
+
+            <h4 style="color:var(--blue)"><i class="fas fa-signal"></i> تحلیل اعداد قدرت سیگنال:</h4>
+            <ul style="line-height: 2;">
+                <li><b style="color:var(--red)">بین ۰ تا ۱۰:</b> روند بسیار ضعیف بوده و بهتر است معامله نکنیم.</li>
+                <li><b style="color:var(--gold)">بین ۱۰ تا ۱۵:</b> سیگنال متوسط است و بهتر است با احتیاط وارد پوزیشن شویم.</li>
+                <li><b style="color:var(--green)">بین ۱۵ تا ۲۰ و بالاتر:</b> روند بسیار قوی ای شکل گرفته و در تمام تایم فریم های روزانه و چهار ساعته و ۱۵ دقیقه ای یکسان و هم سو میباشد که میتوان با خیال راحت وارد پوزیشن شد.</li>
+            </ul>
+            
+            <p style="font-size: 0.9rem; color: #ddd; background: rgba(255,68,68,0.1); padding: 15px; border-right: 4px solid var(--red); margin-top: 20px;">
+                مدیریت ریسک و سرمایه شما همراهان عزیز به عهده ما نبوده و به شخص خودتان بستگی دارد. اندیکاتور فقط سیگنال قوی صادر میکند که استفاده از آن به عهده شماست. سود دهی بی نظیر این سیستم در اکانت ریل بنده به نمایش گذاشته میشود.
+            </p>
         </div>
 
         <div class="bio-section">
             <h2><i class="fas fa-user-circle"></i> درباره مهراد ایرانی</h2>
             <p style="font-size: 1.1rem; line-height: 1.9; text-align: justify;">
-                مهراد ایرانی، خالق سیستم PST؛ موتوری قدرتمند برای تحلیل چندلایه‌ی بازار یورو/دلار.
+                مهراد ایرانی متولد ۱۶ مرداد ۱۳۷۶ در گیلان، مسیر خود را از دنیای حسابداری در سال ۱۳۹۴ آغاز کرد. اما هوش تحلیلی او، وی را به سمت بازارهای مالی جهانی و کریپتوکارنسی کشاند. در سال ۱۴۰۴، با ظهور ابزارهای پیشرفته هوش مصنوعی، مهراد توانست رویای دیرینه خود یعنی تبدیل استراتژی‌های پیچیده ریاضی به کدهای اجرایی را محقق کند. نتیجه این تلاش، خلق **سیستم PST** بود؛ موتوری قدرتمند که با تحلیل چندلایه‌ی بازار، دقتی بی‌نظیر را در ترید جفت‌ارز یورو/دلار به نمایش می‌گذارد. در کانال یوتیوب هم آموزش های استفاده از اندیکاتور و ربات ترید بصورت کامل در دسترس خواهد بود.
             </p>
             <div style="font-size: 1.8rem; color: var(--gold); text-align: center; margin-top: 30px; font-style: italic;">"ستارگان بی بدیل تاریخ در تاریکی مطلق میدرخشند"</div>
         </div>
@@ -234,13 +246,13 @@
             circle.innerText = final;
             if (final >= 15) {
                 circle.style.borderColor = "#00ff00"; circle.style.color = "#00ff00";
-                status.innerHTML = "<span style='color:#00ff00'>STRONG BUY</span>";
+                status.innerHTML = "<span style='color:#00ff00'>STRONG SIGNAL (قوی)</span>";
             } else if (final >= 10) {
                 circle.style.borderColor = "#ffca28"; circle.style.color = "#ffca28";
-                status.innerHTML = "<span style='color:#ffca28'>CAUTION</span>";
+                status.innerHTML = "<span style='color:#ffca28'>CAUTION (احتیاط)</span>";
             } else {
                 circle.style.borderColor = "#ff4444"; circle.style.color = "#ff4444";
-                status.innerHTML = "<span style='color:#ff4444'>WEAK SIGNAL</span>";
+                status.innerHTML = "<span style='color:#ff4444'>WEAK SIGNAL (ضعیف)</span>";
             }
         }
         setTimeout(runPSTEngine, 1500);
