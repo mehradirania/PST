@@ -17,9 +17,10 @@
 
         body {
             font-family: 'Tahoma', sans-serif;
-            /* اضافه کردن عکس ربات به بک‌گراند */
-            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), 
-                        url('https://r2.erweima.ai/i/6f906d0b-4860-4497-9097-f58c70a969f1.png');
+            background-color: var(--dark-bg);
+            /* استفاده از یک عکس جایگزین معتبر و با کیفیت مرتبط با ترید */
+            background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), 
+                              url('https://images.unsplash.com/photo-1642790106117-e829e14a795f?q=80&w=2000');
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
@@ -37,7 +38,7 @@
             align-items: center;
             text-align: center;
             border-bottom: 2px solid var(--blue);
-            background: rgba(0,0,0,0.4);
+            background: rgba(0,0,0,0.3);
         }
 
         .hero h1 { font-size: 3.5rem; margin: 0; color: #fff; text-shadow: 0 0 20px var(--blue); }
@@ -69,7 +70,7 @@
         }
 
         .glass-card {
-            background: rgba(10, 10, 10, 0.85); /* کمی شفاف برای دیدن بک‌گراند */
+            background: rgba(15, 15, 15, 0.85);
             border: 1px solid rgba(255,255,255,0.1);
             backdrop-filter: blur(10px);
             border-radius: 20px;
@@ -121,22 +122,47 @@
             backdrop-filter: blur(10px);
         }
 
-        .results-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-top: 40px;
-        }
-
-        .post-card { background: rgba(15,15,15,0.9); border-radius: 15px; overflow: hidden; border: 1px solid #333; }
-
         @media (max-width: 768px) {
             .dashboard { grid-template-columns: 1fr; }
             .hero h1 { font-size: 2.2rem; }
         }
+        
+        /* دکمه‌های شناور تلگرام و یوتیوب */
+        .social-buttons {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 1000;
+        }
+        
+        .social-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: 0.3s;
+        }
+        
+        .tg-btn { background: #229ED9; }
+        .yt-btn { background: #FF0000; }
+        .social-btn:hover { transform: scale(1.1); }
     </style>
 </head>
 <body>
+
+    <div class="social-buttons">
+        <a href="#" class="social-btn tg-btn" title="تلگرام"><i class="fab fa-telegram-plane"></i></a>
+        <a href="#" class="social-btn yt-btn" title="یوتیوب"><i class="fab fa-youtube"></i></a>
+    </div>
 
     <section class="hero">
         <h1>ربات پی‌اس‌تی (PST Bot)</h1>
@@ -177,7 +203,7 @@
         <div class="info-section">
             <h2 style="color:var(--gold)"><i class="fas fa-microchip"></i> معرفی و راهنمای سیستم PST</h2>
             <p style="line-height: 1.8; text-align: justify;">
-                <strong>مهراد ایرانی:</strong> اندیکاتور پی اس تی بر پایه استراتژی شخصی من ساخته شده و حاصل یازده سال تلاش شبانه روزی من در بازار فارکس و کریپتوکارنسی است. این سیستم با بررسی انحصاری روندهای چارت یورو به دلار، سیگنال‌های به شدت قوی صادر می‌کند.
+                <strong>مهراد ایرانی:</strong> اندیکاتور پی اس تی بر پایه استراتژی شخصی من ساخته شده و حاصل یازده سال تلاش شبانه روزی من در بازار فارکس و کریپتوکارنسی است.
             </p>
             
             <div class="status-guide">
@@ -185,23 +211,15 @@
                 <div class="guide-item"><span class="dot" style="background:var(--red)"></span> فروش (SELL)</div>
                 <div class="guide-item"><span class="dot" style="background:gray"></span> روند خنثی</div>
             </div>
-
-            <h4 style="color:var(--blue)">تحلیل قدرت سیگنال:</h4>
-            <ul style="line-height: 2;">
-                <li><b style="color:var(--red)">۰ تا ۱۰:</b> روند ضعیف</li>
-                <li><b style="color:var(--gold)">۱۰ تا ۱۵:</b> سیگنال متوسط</li>
-                <li><b style="color:var(--green)">۱۵ تا ۲۰+:</b> روند بسیار قوی</li>
-            </ul>
         </div>
 
         <div class="bio-section">
             <h2><i class="fas fa-user-circle"></i> درباره مهراد ایرانی</h2>
             <p style="font-size: 1.1rem; line-height: 1.9; text-align: justify;">
-                مهراد ایرانی متولد ۱۶ مرداد ۱۳۷۶ در گیلان، خالق سیستم PST؛ موتوری قدرتمند که با تحلیل چندلایه‌ی بازار، دقتی بی‌نظیر را در ترید جفت‌ارز یورو/دلار به نمایش می‌گذارد.
+                مهراد ایرانی، خالق سیستم PST؛ موتوری قدرتمند برای تحلیل چندلایه‌ی بازار یورو/دلار.
             </p>
             <div style="font-size: 1.8rem; color: var(--gold); text-align: center; margin-top: 30px; font-style: italic;">"ستارگان بی بدیل تاریخ در تاریکی مطلق میدرخشند"</div>
         </div>
-
     </div>
 
     <footer style="text-align: center; padding: 50px; color: #666; background: rgba(0,0,0,0.8);">
