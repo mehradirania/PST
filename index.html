@@ -24,7 +24,7 @@
         }
 
         .hero {
-            height: 60vh;
+            height: 65vh;
             background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), 
                         url('https://images.unsplash.com/photo-1611974717482-589252c0bc01?q=80&w=2070');
             background-size: cover;
@@ -38,6 +38,23 @@
 
         .hero h1 { font-size: 3.5rem; margin: 0; color: #fff; text-shadow: 0 0 20px var(--blue); }
         .hero p { font-size: 1.2rem; color: var(--blue); letter-spacing: 3px; margin-top: 10px; }
+
+        .loading-msg {
+            background: rgba(255, 202, 40, 0.15);
+            color: var(--gold);
+            padding: 12px 25px;
+            border-radius: 50px;
+            margin-top: 25px;
+            border: 1px solid var(--gold);
+            font-size: 1rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(0.98); }
+            100% { opacity: 1; transform: scale(1); }
+        }
 
         .container { max-width: 1200px; margin: -50px auto 50px; padding: 20px; }
 
@@ -123,6 +140,9 @@
     <section class="hero">
         <h1>ربات پی‌اس‌تی (PST Bot)</h1>
         <p>سیستم معاملاتی هوشمند و استراتژی لایه‌بندی بازار</p>
+        <div class="loading-msg">
+            ⚠️ سایت در حال راه اندازی است لطفا صبور باشید
+        </div>
     </section>
 
     <div class="container">
