@@ -234,30 +234,6 @@
             </div>
         </div>
 
-        <!-- بخش پرداخت دستی کریپتو -->
-        <div class="glass-card crypto-box">
-            <h2 class="section-title"><i class="fas fa-wallet"></i> نحوه پرداخت و دریافت</h2>
-            <div style="text-align: center; margin-bottom: 30px;">
-                <!-- جایگزین QR کد خودتان -->
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=YOUR_USDT_TRC20_ADDRESS_HERE" alt="QR Code" style="border-radius: 10px; border: 5px solid #fff;">
-            </div>
-            <p style="text-align: center; font-weight: bold;">آدرس کیف پول (USDT - شبکه TRC20):</p>
-            <!-- مهم: آدرس کیف پول خود را اینجا قرار دهید -->
-            <div class="wallet-address-box">YOUR_USDT_TRC20_ADDRESS_HERE</div>
-            <p class="copy-hint">(برای کپی کردن روی آدرس کلیک کنید)</p>
-            
-            <div style="background: rgba(0,0,0,0.2); padding: 20px; border-radius: 15px; margin-top: 30px;">
-                <h3 style="color: var(--green); margin-top: 0;"><i class="fas fa-clipboard-check"></i> ثبت سفارش پس از واریز</h3>
-                <p style="font-size: 0.9rem; color: var(--text-muted);">پس از واریز موفق، فرم زیر را پر کنید. لینک دانلود پس از تأیید تراکنش (معمولاً ۱ تا ۱۲ ساعت) به ایمیل شما ارسال خواهد شد.</p>
-                <!-- فرم نمایشی -->
-                <form class="payment-form" onsubmit="event.preventDefault(); alert('سفارش شما ثبت شد! پس از تأیید شبکه، لینک دانلود ایمیل می‌شود.');">
-                    <input type="email" placeholder="ایمیل شما (برای دریافت لینک دانلود)" required>
-                    <input type="text" placeholder="هش تراکنش (TXID) را اینجا پیست کنید" required style="font-family: monospace;">
-                    <button type="submit" class="cta-btn" style="width: 100%; border-radius: 10px;">ثبت نهایی سفارش <i class="fas fa-paper-plane"></i></button>
-                </form>
-            </div>
-        </div>
-
         <!-- بخش منطق -->
         <div class="glass-card info-section">
             <h2 class="section-title"><i class="fas fa-layer-group"></i> منطق پشت PST چیست؟</h2>
