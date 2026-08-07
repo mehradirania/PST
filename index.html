@@ -139,8 +139,12 @@ img{
 
 max-width:100%;
 display:block;
+height:auto;
 
 }
+
+/* Ensure images inside glass cards render correctly */
+.glass-card img{display:block;width:100%;height:auto;}
 
 .container{
 
@@ -165,6 +169,9 @@ padding:30px;
 box-shadow:0 20px 60px rgba(0,0,0,.45);
 
 margin-bottom:40px;
+
+display:block; /* ensure visible */
+visibility:visible;
 
 }
 /* ===========================
@@ -403,7 +410,7 @@ box-shadow:0 25px 50px rgba(255,215,0,.35);
    }
 /* ===========================
    VIDEO SECTION
-========================== */
+========================= */
 
 .video-wrapper{
 
@@ -439,7 +446,7 @@ border:none;
 
 /* ===========================
    PRICING
-========================== */
+========================= */
 
 .pricing-grid{
 
@@ -468,6 +475,8 @@ text-align:center;
 border:2px solid var(--gold);
 
 background:rgba(255,215,0,.05);
+
+display:block; /* ensure visible */
 
 }
 
@@ -529,7 +538,7 @@ font-size:20px;
 
 /* ===========================
    INFO BOXES
-========================== */
+========================= */
 
 .info-grid{
 
@@ -554,6 +563,8 @@ background:rgba(255,255,255,.03);
 border-left:4px solid transparent;
 
 transition:.3s;
+
+display:block; visibility:visible;
 
 }
 
@@ -599,7 +610,7 @@ font-size:30px;
 
 /* ===========================
    BIO
-========================== */
+========================= */
 
 .bio-container{
 
@@ -680,7 +691,7 @@ margin-top:70px;
 }
 /* ===========================
    ANALYSIS CARDS
-========================== */
+========================= */
 
 .analysis-card{
 
@@ -697,6 +708,8 @@ border:1px solid rgba(79,195,255,.55);
 backdrop-filter:blur(12px);
 
 transition:.35s;
+
+display:block; visibility:visible; min-height:80px;
 
 }
 
@@ -732,7 +745,7 @@ line-height:1.9;
 
 /* ===========================
    BUY BUTTON
-========================== */
+========================= */
 
 .buy-box{
 
@@ -747,6 +760,8 @@ border-radius:20px;
 background:rgba(255,215,0,.05);
 
 text-align:center;
+
+display:block; visibility:visible;
 
 }
 
@@ -800,7 +815,7 @@ color:var(--gold);
 
 /* ===========================
    RESPONSIVE
-========================== */
+========================= */
 
 @media(max-width:992px){
 
@@ -1002,82 +1017,219 @@ Professional trading software designed to remove emotions from decision making a
 
 </p>
 
-<a
-href="#buy-section"
-class="cta-btn"
-id="buyButton"
-data-en="Buy PST License"
-data-fa="خرید لابسنس PST">
-Buy PST License
-</a>
-
-<!-- The rest of the original page (pricing, info boxes, video, etc.) remains unchanged below. -->
-
-<!-- Example video wrapper for accessibility and lazy loading -->
-<div class="video-wrapper" aria-hidden="false">
-  <iframe src="https://www.youtube.com/embed" title="PST System Introduction" loading="lazy" width="560" height="315" referrerpolicy="no-referrer"></iframe>
-</div>
+<a href="#buy" class="cta-btn" role="button">Buy Lifetime License</a>
 
 </section>
 
-<!-- Footer (kept minimal) -->
-<footer class="container">
-  <p>&copy; Mehrad Irani — PST Trading System</p>
+<!-- ==========================
+REAL ANALYSIS / ANALYSIS CARDS
+========================= -->
+
+<section class="container">
+  <div class="section-title">
+    <i class="fas fa-chart-line" aria-hidden="true"></i>
+    <h2 data-en="Real Analysis" data-fa="تحلیل‌های واقعی">Real Analysis</h2>
+  </div>
+
+  <div class="glass-card">
+    <div class="analysis-card">
+      <h3 data-en="Market Pulse" data-fa="نبض بازار">Market Pulse</h3>
+      <p data-en="Real-time market snapshots with annotated charts." data-fa="اسنپ‌شات‌های بازار در زمان واقعی با چارت‌های حاشیه‌نویسی شده.">Real-time market snapshots with annotated charts.</p>
+      <img src="analysis1.jpg" alt="Analysis image 1">
+    </div>
+
+    <div class="analysis-card">
+      <h3 data-en="Trend Layers" data-fa="لایه‌های روند">Trend Layers</h3>
+      <p data-en="Multi-timeframe trend detection and signal clarity." data-fa="تشخیص روند در چند بازه زمانی و وضوح سیگنال.">Multi-timeframe trend detection and signal clarity.</p>
+      <img src="analysis2.jpg" alt="Analysis image 2">
+    </div>
+
+    <div class="analysis-card">
+      <h3 data-en="Volume Insights" data-fa="بینش حجمی">Volume Insights</h3>
+      <p data-en="Layered volume analysis to confirm move strength." data-fa="تحلیل حجمی چندلایه برای تایید قدرت حرکت.">Layered volume analysis to confirm move strength.</p>
+      <img src="analysis3.jpg" alt="Analysis image 3">
+    </div>
+  </div>
+</section>
+
+<!-- ==========================
+PST INTRODUCTION
+========================= -->
+
+<section class="container">
+  <div class="section-title">
+    <i class="fas fa-brain" aria-hidden="true"></i>
+    <h2 data-en="PST Introduction" data-fa="معرفی PST">PST Introduction</h2>
+  </div>
+  <div class="glass-card">
+    <p data-en="PST is a professional multi-layer trading indicator built from real trading experience." data-fa="PST یک اندیکاتور معاملاتی چندلایه حرفه‌ای است که از تجربه واقعی معاملات ساخته شده است.">PST is a professional multi-layer trading indicator built from real trading experience.</p>
+  </div>
+</section>
+
+<!-- ==========================
+VIDEO SECTION
+========================= -->
+
+<section class="container">
+  <div class="section-title">
+    <i class="fas fa-video" aria-hidden="true"></i>
+    <h2 data-en="Walkthrough Video" data-fa="ویدئو معرفی">Walkthrough Video</h2>
+  </div>
+  <div class="glass-card video-wrapper">
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="PST Walkthrough" allowfullscreen></iframe>
+  </div>
+</section>
+
+<!-- ==========================
+PRICING / BUY SECTION
+========================= -->
+
+<section id="buy" class="container">
+  <div class="section-title">
+    <i class="fas fa-dollar-sign" aria-hidden="true"></i>
+    <h2 data-en="Pricing & Buy" data-fa="قیمت و خرید">Pricing & Buy</h2>
+  </div>
+
+  <div class="pricing-grid">
+    <div class="price-box">
+      <div class="price-amount">$1099</div>
+      <div class="price-label" data-en="Lifetime License" data-fa="لایسنس مادام‌العمر">Lifetime License</div>
+      <ul class="package-list">
+        <li><i class="fas fa-check"></i> <span data-en="All indicators" data-fa="تمام اندیکاتورها">All indicators</span></li>
+        <li><i class="fas fa-check"></i> <span data-en="Email support" data-fa="پشتیبانی ایمیلی">Email support</span></li>
+      </ul>
+      <div class="buy-box">
+        <a class="buy-link" href="#">Buy for $1099</a>
+        <div class="price-text"><span>$1099</span> <span data-en="One-time" data-fa="یک‌بار">One-time</span></div>
+      </div>
+    </div>
+
+    <div class="price-box">
+      <div class="price-amount">$299</div>
+      <div class="price-label" data-en="Pro License" data-fa="لایسنس حرفه‌ای">Pro License</div>
+      <ul class="package-list">
+        <li><i class="fas fa-check"></i> <span data-en="Core indicators" data-fa="اندیکاتورهای اصلی">Core indicators</span></li>
+        <li><i class="fas fa-check"></i> <span data-en="Priority support" data-fa="پشتیبانی اولویت‌دار">Priority support</span></li>
+      </ul>
+      <div class="buy-box">
+        <a class="buy-link" href="#">Buy for $299</a>
+        <div class="price-text"><span>$299</span> <span data-en="One-time" data-fa="یک‌بار">One-time</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================
+PST LOGIC
+========================= -->
+
+<section class="container">
+  <div class="section-title">
+    <i class="fas fa-cogs" aria-hidden="true"></i>
+    <h2 data-en="PST Logic" data-fa="منطق PST">PST Logic</h2>
+  </div>
+
+  <div class="glass-card info-grid">
+    <div class="info-box">
+      <h3 data-en="Multi-Layer Signals" data-fa="سیگنال‌های چندلایه">Multi-Layer Signals</h3>
+      <p data-en="Combines trend, volume and momentum to generate robust signals." data-fa="ترکیب روند، حجم و مومنتوم برای تولید سیگنال‌های قدرتمند.">Combines trend, volume and momentum to generate robust signals.</p>
+    </div>
+    <div class="info-box">
+      <h3 data-en="AI Filtering" data-fa="فیلتر هوش مصنوعی">AI Filtering</h3>
+      <p data-en="Machine-learned filters reduce false positives." data-fa="فیلترهای یادگیری ماشین خطاهای مثبت کاذب را کاهش می‌دهند.">Machine-learned filters reduce false positives.</p>
+    </div>
+    <div class="info-box">
+      <h3 data-en="Multi-Timeframe" data-fa="چند بازه‌ای">Multi-Timeframe</h3>
+      <p data-en="Analyses across multiple timeframes to align higher-timeframe context." data-fa="تحلیل در بازه‌های زمانی متعدد برای هم‌راستا کردن زمینه بازه بالاتر.">Analyses across multiple timeframes to align higher-timeframe context.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================
+ABOUT CREATOR
+========================= -->
+
+<section class="container">
+  <div class="section-title">
+    <i class="fas fa-user" aria-hidden="true"></i>
+    <h2 data-en="About the Creator" data-fa="درباره سازنده">About the Creator</h2>
+  </div>
+  <div class="glass-card bio-container">
+    <div class="bio-text">
+      <h3 data-en="Mehrad Irani" data-fa="مهراد ایرا نی">Mehrad Irani</h3>
+      <p data-en="11 years of professional trading experience and indicator development." data-fa="۱۱ سال تجربه حرفه‌ای معاملات و توسعه اندیکاتور.">11 years of professional trading experience and indicator development.</p>
+    </div>
+    <div class="quote-box">
+      <i class="fas fa-quote-left" aria-hidden="true"></i>
+      <p data-en="Trading is about discipline and process." data-fa="معاملات درباره نظم و فرایند است.">Trading is about discipline and process.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================
+FOOTER
+========================= -->
+
+<footer>
+  <div class="container">
+    <p>&copy; <span id="year"></span> PST Trading System. All rights reserved.</p>
+  </div>
 </footer>
 
 <script>
-// Language toggle: switches text between data-en and data-fa and toggles dir/lang attributes
+// Language toggle script: toggles text between English and Farsi using data-en and data-fa
 (function(){
-  const btn = document.getElementById('langToggle');
-  const htmlEl = document.documentElement;
+  const toggle = document.getElementById('langToggle');
   const flag = document.getElementById('langFlag');
   const langText = document.getElementById('langText');
+  const yearEl = document.getElementById('year');
+  yearEl.textContent = new Date().getFullYear();
 
-  // elements to localize: any element that has data-en and data-fa
-  function getLocalizables(){
-    return Array.from(document.querySelectorAll('[data-en][data-fa]'));
-  }
-
-  function setLanguage(isFa){
-    const elems = getLocalizables();
-    elems.forEach(el => {
-      // prefer textContent replacement to preserve markup structure
-      const text = isFa ? el.getAttribute('data-fa') : el.getAttribute('data-en');
-      // only update if text differs to minimize reflow
-      if(el.textContent.trim() !== text.trim()) el.textContent = text;
+  // setLang updates only text nodes inside elements that have data-en and data-fa,
+  // preserving any child elements such as icons.
+  function setLang(lang){
+    const nodes = document.querySelectorAll('[data-en][data-fa]');
+    nodes.forEach(el=>{
+      const text = el.dataset[lang];
+      if(typeof text !== 'string') return;
+      // Remove existing text nodes but preserve element children (icons, spans, etc.)
+      // We'll insert the localized text as a single text node at the start.
+      // Keep a reference to non-text children to re-append after the text node if needed.
+      const children = Array.from(el.childNodes).filter(n => n.nodeType !== 3);
+      // Clear all children
+      while(el.firstChild) el.removeChild(el.firstChild);
+      // Insert localized text node
+      el.appendChild(document.createTextNode(text));
+      // Re-append preserved non-text children (icons etc.) after the text node
+      children.forEach(c=> el.appendChild(c));
     });
 
-    if(isFa){
-      htmlEl.setAttribute('dir','rtl');
-      htmlEl.setAttribute('lang','fa');
+    // Update direction and language button visuals
+    if(lang === 'fa'){
+      document.documentElement.setAttribute('lang','fa');
+      document.body.setAttribute('dir','rtl');
       flag.textContent = '🇮🇷';
       langText.textContent = 'فارسی';
-      btn.setAttribute('aria-pressed','true');
+      toggle.setAttribute('aria-pressed','true');
     } else {
-      htmlEl.setAttribute('dir','ltr');
-      htmlEl.setAttribute('lang','en');
-      flag.textContent = '🇺🇸';
+      document.documentElement.setAttribute('lang','en');
+      document.body.setAttribute('dir','ltr');
+      flag.textContent = '🇬🇧';
       langText.textContent = 'English';
-      btn.setAttribute('aria-pressed','false');
+      toggle.setAttribute('aria-pressed','false');
     }
-
-    // small delay to allow CSS font change to apply smoothly
-    document.body.style.transition = 'direction 0.2s ease, font-family 0.2s ease';
   }
 
-  // initialize based on current html dir or saved preference
-  const saved = localStorage.getItem('pst_lang');
-  const startFa = saved ? saved === 'fa' : (htmlEl.getAttribute('dir') === 'rtl');
-  setLanguage(startFa);
+  // Initialize language from html lang or default to en
+  const initial = document.documentElement.getAttribute('lang') === 'fa' || document.body.getAttribute('dir') === 'rtl' ? 'fa' : 'en';
+  setLang(initial);
 
-  btn.addEventListener('click', function(){
-    const nowFa = htmlEl.getAttribute('dir') === 'rtl';
-    setLanguage(!nowFa);
-    localStorage.setItem('pst_lang', (!nowFa) ? 'fa' : 'en');
+  toggle.addEventListener('click', ()=>{
+    const current = toggle.getAttribute('aria-pressed') === 'true' ? 'fa' : 'en';
+    const next = current === 'fa' ? 'en' : 'fa';
+    setLang(next);
   });
 
-  // expose for debugging
-  window.__pst_setLanguage = setLanguage;
 })();
 </script>
 
