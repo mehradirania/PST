@@ -1514,3 +1514,62 @@ PST Creator
 </div>
 
 </div>
+<footer>
+
+<p>
+
+© 2026 PST SYSTEM
+
+</p>
+
+<p
+data-en="Developed by Mehrad Irani. All Rights Reserved."
+data-fa="طراحی و توسعه توسط مهراد ایرانی. تمامی حقوق محفوظ است.">
+
+Developed by Mehrad Irani. All Rights Reserved.
+
+</p>
+
+</footer>
+
+<script>
+
+const langBtn=document.getElementById("langToggle");
+
+function setLanguage(lang){
+
+document.documentElement.lang=lang;
+
+document.documentElement.dir=lang==="fa"?"rtl":"ltr";
+
+localStorage.setItem("language",lang);
+
+langBtn.innerHTML=lang==="en"
+?"🇮🇷 فارسی"
+:"🇺🇸 English";
+
+document.querySelectorAll("[data-en]").forEach(el=>{
+
+el.innerHTML=el.dataset[lang];
+
+});
+
+}
+
+let currentLang=localStorage.getItem("language")||"en";
+
+setLanguage(currentLang);
+
+langBtn.addEventListener("click",()=>{
+
+currentLang=currentLang==="en"?"fa":"en";
+
+setLanguage(currentLang);
+
+});
+
+</script>
+
+</body>
+
+</html>
