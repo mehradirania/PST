@@ -494,72 +494,59 @@ body[dir="rtl"] .social-sidebar{
     <footer>
         © 2026 PST System | Developed by Mehrad Irani. All rights reserved.
     </footer>
-    <script>
+<script>
 
 const langBtn=document.getElementById("langToggle");
 
-const text={
+const translations={
 
 en:{
-
-title:"PST SYSTEM",
-
-subtitle:"11 Years of Trading Experience, Engineered into One Intelligent System.",
-
-desc:"A professional trading system designed to eliminate emotions and help traders make logical, data-driven decisions.",
-
-buy:"Buy PST License"
-
+heroTitle:"PST SYSTEM",
+heroSubtitle:"11 Years of Trading Experience, Engineered into One Intelligent System.",
+heroDesc:"A professional trading system designed to eliminate emotions and help traders make logical, data-driven decisions.",
+buyBtn:"Buy PST License"
 },
 
 fa:{
-
-title:"سیستم PST",
-
-subtitle:"۱۱ سال تجربه ترید، خلاصه شده در یک الگوریتم.",
-
-desc:"سیستم معاملاتی حرفه‌ای برای کسانی که می‌خواهند احساسات را از معامله حذف کنند.",
-
-buy:"خرید لایسنس PST"
-
+heroTitle:"سیستم PST",
+heroSubtitle:"۱۱ سال تجربه ترید، خلاصه شده در یک الگوریتم.",
+heroDesc:"سیستم معاملاتی حرفه‌ای برای کسانی که می‌خواهند احساسات را از معامله حذف کنند.",
+buyBtn:"خرید لایسنس PST"
 }
 
 };
 
-let lang=localStorage.getItem("lang")||"en";
+function setLanguage(lang){
 
-changeLanguage(lang);
+document.documentElement.lang=lang;
+document.documentElement.dir=lang==="fa"?"rtl":"ltr";
 
-langBtn.onclick=()=>{
+localStorage.setItem("lang",lang);
 
-lang=lang==="en"?"fa":"en";
+langBtn.innerHTML=lang==="en"?"🇮🇷 فارسی":"🇺🇸 EN";
 
-changeLanguage(lang);
+document.getElementById("hero-title").innerText=translations[lang].heroTitle;
 
-};
+document.getElementById("hero-subtitle").innerText=translations[lang].heroSubtitle;
 
-function changeLanguage(language){
+document.getElementById("hero-description").innerText=translations[lang].heroDesc;
 
-localStorage.setItem("lang",language);
-
-document.documentElement.lang=language;
-
-document.body.className=language;
-
-document.documentElement.dir=language==="fa"?"rtl":"ltr";
-
-langBtn.innerHTML=language==="en"?"🇮🇷 فارسی":"🇺🇸 EN";
-
-document.getElementById("hero-title").innerHTML=text[language].title;
-
-document.getElementById("hero-subtitle").innerHTML=text[language].subtitle;
-
-document.getElementById("hero-description").innerHTML=text[language].desc;
-
-document.getElementById("buyButton").innerHTML='<i class="fas fa-shopping-cart"></i> '+text[language].buy;
+document.getElementById("buyButton").innerHTML='<i class="fas fa-shopping-cart"></i> '+translations[lang].buyBtn;
 
 }
 
-    </script>
+let currentLang=localStorage.getItem("lang")||"en";
+
+setLanguage(currentLang);
+
+langBtn.addEventListener("click",()=>{
+
+currentLang=currentLang==="en"?"fa":"en";
+
+setLanguage(currentLang);
+
+});
+
+</script>
 </body>
 </html>
