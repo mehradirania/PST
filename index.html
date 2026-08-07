@@ -945,7 +945,7 @@ font-size:18px;
 
 <!-- ==========================
 LANGUAGE BUTTON
-========================== -->
+========================= -->
 
 <button id="langToggle" class="lang-switch" aria-pressed="false" aria-label="Toggle language">
 <span id="langFlag">🇮🇷</span> <span id="langText">فارسی</span>
@@ -953,7 +953,7 @@ LANGUAGE BUTTON
 
 <!-- ==========================
 SOCIAL LINKS
-========================== -->
+========================= -->
 
 <nav class="social-sidebar" role="navigation" aria-label="Social links">
 
@@ -985,7 +985,7 @@ SOCIAL LINKS
 
 <!-- ==========================
 HERO
-========================== -->
+========================= -->
 
 <section class="hero container">
 
@@ -998,114 +998,3 @@ PST SYSTEM
 
 </h1>
 
-<h2 class="subtitle" id="hero-subtitle" data-en="AI Multi-Layer Trading Indicator" data-fa="اندیکاتور چندلایه هوش مصنوعی">
-Professional Multi-Layer Trading Indicator — PST
-</h2>
-
-<a href="#buy" class="cta-btn">خرید / Buy Now</a>
-
-</section>
-
-<main class="container">
-
-<!-- Video -->
-<div class="glass-card">
-  <div class="section-title"><i class="fas fa-play-circle"></i><span>Watch</span></div>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="PST Demo" allowfullscreen aria-label="PST Demo video"></iframe>
-  </div>
-</div>
-
-<!-- Pricing -->
-<div class="glass-card">
-  <div class="section-title"><i class="fas fa-tag"></i><span>Pricing</span></div>
-  <div class="pricing-grid">
-    <div class="price-box">
-      <div class="price-amount">$99</div>
-      <div class="price-label">Lifetime</div>
-      <ul class="package-list">
-        <li><i class="fas fa-check"></i> Full Indicator</li>
-        <li><i class="fas fa-check"></i> Lifetime Updates</li>
-      </ul>
-    </div>
-    <div class="price-box">
-      <div class="price-amount">$49</div>
-      <div class="price-label">1 Year</div>
-      <ul class="package-list">
-        <li><i class="fas fa-check"></i> Full Indicator</li>
-        <li><i class="fas fa-check"></i> One Year Support</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<!-- Info Boxes -->
-<div class="glass-card info-grid">
-  <div class="info-box">
-    <h3>Overview</h3>
-    <p>Built from 11 years of trading experience to provide multi-layered signals and analysis.</p>
-  </div>
-  <div class="info-box">
-    <h3>Features</h3>
-    <p>AI-driven entries, risk management suggestions, and easy MetaTrader integration.</p>
-  </div>
-  <div class="info-box">
-    <h3>Support</h3>
-    <p>Dedicated Persian and English support via Telegram and email.</p>
-  </div>
-</div>
-
-<!-- Analysis Cards -->
-<div class="glass-card">
-  <div class="section-title"><i class="fas fa-chart-line"></i><span>Analysis</span></div>
-  <div class="analysis-card">
-    <h3>Real-time Signals</h3>
-    <p>Receive layered confirmation signals to reduce false entries.</p>
-  </div>
-  <div class="analysis-card">
-    <h3>Backtesting</h3>
-    <p>Robust backtesting engine included for strategy validation.</p>
-  </div>
-</div>
-
-<!-- Buy Box -->
-<div id="buy" class="glass-card buy-box">
-  <a class="buy-link" href="https://t.me/PST_SYSTEM" target="_blank" rel="noopener">Buy via Telegram</a>
-  <div class="price-text">Price: <span>$99</span></div>
-</div>
-
-</main>
-
-<footer>
-  © Mehrad Irani — PST Trading System
-</footer>
-
-<script>
-// Simple language toggle (ltr/rtl)
-const langToggle = document.getElementById('langToggle');
-langToggle.addEventListener('click', () => {
-  const html = document.documentElement;
-  const isRtl = html.getAttribute('dir') === 'rtl';
-  if (isRtl) {
-    html.setAttribute('dir', 'ltr');
-    langToggle.setAttribute('aria-pressed', 'false');
-    document.getElementById('langFlag').textContent = '🇮🇷';
-    document.getElementById('langText').textContent = 'فارسی';
-  } else {
-    html.setAttribute('dir', 'rtl');
-    langToggle.setAttribute('aria-pressed', 'true');
-    document.getElementById('langFlag').textContent = '🇺🇸';
-    document.getElementById('langText').textContent = 'EN';
-  }
-});
-
-// Accessibility: ensure focus outlines for keyboard users
-document.addEventListener('keydown', function(e){
-  if(e.key === 'Tab'){
-    document.body.classList.add('user-is-tabbing');
-  }
-});
-</script>
-
-</body>
-</html>
