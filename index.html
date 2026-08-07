@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +10,84 @@
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    /* ===== Language Switch ===== */
+
+body{
+    font-family:'Inter',sans-serif;
+    transition:.3s;
+}
+
+body.fa{
+    font-family:'Vazirmatn',sans-serif;
+}
+
+.lang-switch{
+
+    position:fixed;
+
+    top:25px;
+
+    right:25px;
+
+    z-index:9999;
+
+    background:#111;
+
+    border:1px solid #00e5ff;
+
+    color:white;
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    font-size:14px;
+
+    transition:.3s;
+
+    user-select:none;
+
+}
+
+.lang-switch:hover{
+
+    background:#00e5ff;
+
+    color:#000;
+
+}
+
+body.fa{
+
+    direction:rtl;
+
+}
+
+body.en{
+
+    direction:ltr;
+
+}
+
+body.fa .hero,
+body.fa section{
+
+    text-align:right;
+
+}
+
+body.en .hero,
+body.en section{
+
+    text-align:left;
+
+}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- استایل‌ها -->
     <style>
