@@ -429,5 +429,72 @@
     <footer>
         © 2026 PST System | Developed by Mehrad Irani. All rights reserved.
     </footer>
+    <script>
+
+const langBtn=document.getElementById("langToggle");
+
+const text={
+
+en:{
+
+title:"PST SYSTEM",
+
+subtitle:"11 Years of Trading Experience, Engineered into One Intelligent System.",
+
+desc:"A professional trading system designed to eliminate emotions and help traders make logical, data-driven decisions.",
+
+buy:"Buy PST License"
+
+},
+
+fa:{
+
+title:"سیستم PST",
+
+subtitle:"۱۱ سال تجربه ترید، خلاصه شده در یک الگوریتم.",
+
+desc:"سیستم معاملاتی حرفه‌ای برای کسانی که می‌خواهند احساسات را از معامله حذف کنند.",
+
+buy:"خرید لایسنس PST"
+
+}
+
+};
+
+let lang=localStorage.getItem("lang")||"en";
+
+changeLanguage(lang);
+
+langBtn.onclick=()=>{
+
+lang=lang==="en"?"fa":"en";
+
+changeLanguage(lang);
+
+};
+
+function changeLanguage(language){
+
+localStorage.setItem("lang",language);
+
+document.documentElement.lang=language;
+
+document.body.className=language;
+
+document.documentElement.dir=language==="fa"?"rtl":"ltr";
+
+langBtn.innerHTML=language==="en"?"🇮🇷 فارسی":"🇺🇸 EN";
+
+document.getElementById("hero-title").innerHTML=text[language].title;
+
+document.getElementById("hero-subtitle").innerHTML=text[language].subtitle;
+
+document.getElementById("hero-description").innerHTML=text[language].desc;
+
+document.getElementById("buyButton").innerHTML='<i class="fas fa-shopping-cart"></i> '+text[language].buy;
+
+}
+
+    </script>
 </body>
 </html>
