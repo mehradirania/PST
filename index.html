@@ -115,7 +115,306 @@ transition:.35s;
 
 body[dir="rtl"]{
 
+/* ===========================
+   Language Switch
+=========================== */
+
+.lang-switch{
+
+position:fixed;
+
+top:25px;
+
+right:25px;
+
+z-index:9999;
+
+padding:12px 22px;
+
+border-radius:40px;
+
+border:1px solid var(--gold);
+
+background:rgba(17,34,64,.85);
+
+color:var(--gold);
+
+font-size:15px;
+
+font-weight:700;
+
+cursor:pointer;
+
+backdrop-filter:blur(10px);
+
+transition:.35s;
+
+}
+
+.lang-switch:hover{
+
+background:var(--gold);
+
+color:#000;
+
+transform:translateY(-3px);
+
+box-shadow:0 10px 25px rgba(255,215,0,.35);
+
+}
+
+/* ===========================
+   Social Sidebar
+=========================== */
+
+.social-sidebar{
+
+position:fixed;
+
+left:30px;
+
+top:30px;
+
+display:flex;
+
+flex-direction:column;
+
+gap:15px;
+
+z-index:999;
+
+}
+
+body[dir="rtl"] .social-sidebar{
+
+left:auto;
+
+right:30px;
+
+}
+
+.social-link{
+
+width:42px;
+
+height:42px;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-decoration:none;
+
+background:rgba(17,34,64,.75);
+
+color:#c9d5ff;
+
+font-size:18px;
+
+transition:.3s;
+
+border:1px solid rgba(255,255,255,.06);
+
+}
+
+.social-link:hover{
+
+transform:translateX(5px);
+
+border-color:var(--gold);
+
+color:var(--gold);
+
+}
+
+/* ===========================
+Hero
+=========================== */
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+text-align:center;
+
+padding:20px;
+
+position:relative;
+
+}
+
+.hero h1{
+
+font-size:72px;
+
+font-family:'Orbitron',sans-serif;
+
+color:var(--gold);
+
+margin-bottom:20px;
+
+text-shadow:0 0 30px rgba(255,215,0,.35);
+
+}
+
+.hero h2{
+
+font-size:30px;
+
+font-weight:400;
+
+margin-bottom:20px;
+
+}
+
+.hero .subtitle{
+
+max-width:760px;
+
+font-size:20px;
+
+color:var(--text-muted);
+
+margin-bottom:40px;
+
+}
+    
 font-family:'Vazirmatn',sans-serif;
+
+}
+    /* ===========================
+Buttons
+=========================== */
+
+.cta-btn{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:10px;
+
+padding:16px 38px;
+
+border-radius:50px;
+
+background:linear-gradient(135deg,#FFD700,#ffb700);
+
+color:#000;
+
+font-weight:700;
+
+font-size:18px;
+
+text-decoration:none;
+
+transition:.35s;
+
+box-shadow:0 12px 35px rgba(255,215,0,.25);
+
+}
+
+.cta-btn:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 18px 45px rgba(255,215,0,.35);
+
+}
+
+/* ===========================
+Container
+=========================== */
+
+.container{
+
+max-width:1150px;
+
+margin:auto;
+
+padding:20px;
+
+}
+
+.glass-card{
+
+background:rgba(17,34,64,.82);
+
+border:1px solid rgba(255,255,255,.08);
+
+backdrop-filter:blur(12px);
+
+border-radius:22px;
+
+padding:30px;
+
+margin-bottom:35px;
+
+}
+
+/* ===========================
+Responsive
+=========================== */
+
+@media(max-width:900px){
+
+.hero h1{
+
+font-size:46px;
+
+}
+
+.hero h2{
+
+font-size:24px;
+
+}
+
+.hero .subtitle{
+
+font-size:17px;
+
+}
+
+.lang-switch{
+
+top:15px;
+
+right:15px;
+
+font-size:13px;
+
+padding:10px 16px;
+
+}
+
+.social-sidebar{
+
+left:15px;
+
+top:15px;
+
+}
+
+body[dir="rtl"] .social-sidebar{
+
+left:auto;
+
+right:15px;
+
+}
 
 }
 <head>
