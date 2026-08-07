@@ -510,7 +510,7 @@ btn.innerHTML=lang==="en"?"🇮🇷 فارسی":"🇺🇸 EN";
 
 document.querySelectorAll("[data-en]").forEach(el=>{
 
-el.innerHTML=el.dataset[lang];
+el.innerHTML = el.getAttribute("data-" + lang);
 
 });
 
