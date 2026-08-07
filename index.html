@@ -496,56 +496,37 @@ body[dir="rtl"] .social-sidebar{
     </footer>
 <script>
 
-const langBtn=document.getElementById("langToggle");
-
-const translations={
-
-en:{
-heroTitle:"PST SYSTEM",
-heroSubtitle:"11 Years of Trading Experience, Engineered into One Intelligent System.",
-heroDesc:"A professional trading system designed to eliminate emotions and help traders make logical, data-driven decisions.",
-buyBtn:"Buy PST License"
-},
-
-fa:{
-heroTitle:"سیستم PST",
-heroSubtitle:"۱۱ سال تجربه ترید، خلاصه شده در یک الگوریتم.",
-heroDesc:"سیستم معاملاتی حرفه‌ای برای کسانی که می‌خواهند احساسات را از معامله حذف کنند.",
-buyBtn:"خرید لایسنس PST"
-}
-
-};
+const btn=document.getElementById("langToggle");
 
 function setLanguage(lang){
 
 document.documentElement.lang=lang;
+
 document.documentElement.dir=lang==="fa"?"rtl":"ltr";
 
 localStorage.setItem("lang",lang);
 
-langBtn.innerHTML=lang==="en"?"🇮🇷 فارسی":"🇺🇸 EN";
+btn.innerHTML=lang==="en"?"🇮🇷 فارسی":"🇺🇸 EN";
 
-document.getElementById("hero-title").innerText=translations[lang].heroTitle;
+document.querySelectorAll("[data-en]").forEach(el=>{
 
-document.getElementById("hero-subtitle").innerText=translations[lang].heroSubtitle;
+el.innerHTML=el.dataset[lang];
 
-document.getElementById("hero-description").innerText=translations[lang].heroDesc;
-
-document.getElementById("buyButton").innerHTML='<i class="fas fa-shopping-cart"></i> '+translations[lang].buyBtn;
+});
 
 }
 
-let currentLang=localStorage.getItem("lang")||"en";
+let lang=localStorage.getItem("lang")||"en";
 
-setLanguage(currentLang);
+setLanguage(lang);
 
-langBtn.addEventListener("click",()=>{
+btn.onclick=()=>{
 
-currentLang=currentLang==="en"?"fa":"en";
+lang=lang==="en"?"fa":"en";
 
-setLanguage(currentLang);
+setLanguage(lang);
 
-});
+};
 
 </script>
 </body>
