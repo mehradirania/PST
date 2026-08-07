@@ -167,4 +167,245 @@ box-shadow:0 20px 60px rgba(0,0,0,.45);
 margin-bottom:40px;
 
 }
+/* ===========================
+   SOCIAL SIDEBAR
+=========================== */
+
+.social-sidebar{
+
+position:fixed;
+
+top:30px;
+
+left:30px;
+
+display:flex;
+
+flex-direction:column;
+
+gap:15px;
+
+z-index:999;
+
+transition:.3s;
+
+}
+
+body[dir="rtl"] .social-sidebar{
+
+left:auto;
+
+right:30px;
+
+}
+
+.social-link{
+
+width:42px;
+
+height:42px;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,255,255,.08);
+
+color:var(--text-muted);
+
+font-size:20px;
+
+transition:.35s;
+
+backdrop-filter:blur(8px);
+
+}
+
+.social-link:hover{
+
+transform:translateY(-4px);
+
+color:#fff;
+
+border-color:var(--gold);
+
+background:rgba(255,215,0,.12);
+
+}
+
+.telegram:hover{
+
+color:#29a9ea;
+
+}
+
+.instagram:hover{
+
+color:#ff4f81;
+
+}
+
+.youtube:hover{
+
+color:#ff3434;
+
+}
+
+/* ===========================
+   LANGUAGE BUTTON
+=========================== */
+
+.lang-switch{
+
+position:fixed;
+
+top:30px;
+
+right:30px;
+
+padding:11px 20px;
+
+border-radius:40px;
+
+background:rgba(17,34,64,.82);
+
+border:1px solid var(--gold);
+
+color:var(--gold);
+
+font-size:15px;
+
+font-weight:700;
+
+cursor:pointer;
+
+backdrop-filter:blur(10px);
+
+transition:.35s;
+
+z-index:1000;
+
+}
+
+.lang-switch:hover{
+
+background:var(--gold);
+
+color:#000;
+
+}
+
+body[dir="rtl"] .lang-switch{
+
+left:30px;
+
+right:auto;
+
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:30px;
+
+position:relative;
+
+}
+
+.hero h1{
+
+font-size:68px;
+
+font-family:'Orbitron',sans-serif;
+
+font-weight:900;
+
+letter-spacing:-2px;
+
+color:var(--gold);
+
+text-shadow:0 0 40px rgba(255,215,0,.30);
+
+margin-bottom:20px;
+
+}
+
+.hero h2{
+
+font-size:28px;
+
+font-weight:300;
+
+max-width:900px;
+
+margin-bottom:20px;
+
+}
+
+.hero .subtitle{
+
+max-width:760px;
+
+font-size:18px;
+
+color:var(--text-muted);
+
+margin-bottom:40px;
+
+}
+
+.cta-btn{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:12px;
+
+padding:16px 42px;
+
+background:linear-gradient(135deg,#FFD700,#ffb300);
+
+color:#000;
+
+border-radius:40px;
+
+font-weight:700;
+
+font-size:18px;
+
+transition:.35s;
+
+box-shadow:0 15px 40px rgba(255,215,0,.25);
+
+}
+
+.cta-btn:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 25px 50px rgba(255,215,0,.35);
+
+   }
    
