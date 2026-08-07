@@ -139,12 +139,8 @@ img{
 
 max-width:100%;
 display:block;
-height:auto;
 
 }
-
-/* Ensure images inside glass cards render correctly */
-.glass-card img{display:block;width:100%;height:auto;}
 
 .container{
 
@@ -170,11 +166,8 @@ box-shadow:0 20px 60px rgba(0,0,0,.45);
 
 margin-bottom:40px;
 
-display:block; /* ensure visible */
-visibility:visible;
-
 }
-/* ===========================
+   /* ===========================
    SOCIAL SIDEBAR
 =========================== */
 
@@ -246,20 +239,27 @@ background:rgba(255,215,0,.12);
 
 }
 
-   .telegram:hover{
-    color:#29a9ea;
+.telegram:hover{
+
+color:#29a9ea;
+
 }
 
 .instagram:hover{
-    color:#ff4f81;
+
+color:#ff4f81;
+
 }
 
 .youtube:hover{
-    color:#ff3434;
+
+color:#ff3434;
+
 }
+
 /* ===========================
    LANGUAGE BUTTON
-========================= */
+=========================== */
 
 .lang-switch{
 
@@ -311,7 +311,7 @@ right:auto;
 
 /* ===========================
    HERO
-========================= */
+=========================== */
 
 .hero{
 
@@ -408,9 +408,9 @@ transform:translateY(-5px);
 box-shadow:0 25px 50px rgba(255,215,0,.35);
 
    }
-/* ===========================
+   /* ===========================
    VIDEO SECTION
-========================= */
+=========================== */
 
 .video-wrapper{
 
@@ -446,7 +446,7 @@ border:none;
 
 /* ===========================
    PRICING
-========================= */
+=========================== */
 
 .pricing-grid{
 
@@ -475,8 +475,6 @@ text-align:center;
 border:2px solid var(--gold);
 
 background:rgba(255,215,0,.05);
-
-display:block; /* ensure visible */
 
 }
 
@@ -538,7 +536,7 @@ font-size:20px;
 
 /* ===========================
    INFO BOXES
-========================= */
+=========================== */
 
 .info-grid{
 
@@ -563,8 +561,6 @@ background:rgba(255,255,255,.03);
 border-left:4px solid transparent;
 
 transition:.3s;
-
-display:block; visibility:visible;
 
 }
 
@@ -610,7 +606,7 @@ font-size:30px;
 
 /* ===========================
    BIO
-========================= */
+=========================== */
 
 .bio-container{
 
@@ -688,10 +684,10 @@ border-top:1px solid rgba(255,255,255,.08);
 
 margin-top:70px;
 
-}
-/* ===========================
+   }
+   /* ===========================
    ANALYSIS CARDS
-========================= */
+=========================== */
 
 .analysis-card{
 
@@ -708,8 +704,6 @@ border:1px solid rgba(79,195,255,.55);
 backdrop-filter:blur(12px);
 
 transition:.35s;
-
-display:block; visibility:visible; min-height:80px;
 
 }
 
@@ -745,7 +739,7 @@ line-height:1.9;
 
 /* ===========================
    BUY BUTTON
-========================= */
+=========================== */
 
 .buy-box{
 
@@ -760,8 +754,6 @@ border-radius:20px;
 background:rgba(255,215,0,.05);
 
 text-align:center;
-
-display:block; visibility:visible;
 
 }
 
@@ -815,7 +807,7 @@ color:var(--gold);
 
 /* ===========================
    RESPONSIVE
-========================= */
+=========================== */
 
 @media(max-width:992px){
 
@@ -935,59 +927,43 @@ font-size:18px;
 
 }
 
-/* Ensure social icons don't overflow on very small screens */
-.social-sidebar{transform:translateY(0);}
-
 }
 </style>
-</head>
 <body>
 
 <!-- ==========================
 LANGUAGE BUTTON
-========================= -->
+========================== -->
 
-<button id="langToggle" class="lang-switch" aria-pressed="false" aria-label="Toggle language">
-<span id="langFlag">🇮🇷</span> <span id="langText">فارسی</span>
+<button id="langToggle" class="lang-switch">
+🇮🇷 فارسی
 </button>
 
 <!-- ==========================
 SOCIAL LINKS
-========================= -->
+========================== -->
 
-<nav class="social-sidebar" role="navigation" aria-label="Social links">
+<div class="social-sidebar">
 
-<a href="https://t.me/PST_SYSTEM"
-   target="_blank"
-   rel="noopener noreferrer"
-   class="social-link telegram"
-   title="Telegram" aria-label="Telegram">
-  <i class="fab fa-telegram-plane" aria-hidden="true"></i>
+<a href="YOUR_TELEGRAM_LINK" target="_blank" class="social-link telegram">
+<i class="fab fa-telegram-plane"></i>
 </a>
 
-<a href="https://www.instagram.com/pst.irani?igsh=ZHBhaGdnZG10NDVs"
-   target="_blank"
-   rel="noopener noreferrer"
-   class="social-link instagram"
-   title="Instagram" aria-label="Instagram">
-  <i class="fab fa-instagram" aria-hidden="true"></i>
+<a href="YOUR_INSTAGRAM_LINK" target="_blank" class="social-link instagram">
+<i class="fab fa-instagram"></i>
 </a>
 
-<a href="https://youtube.com/@pstsystem?si=ImsBuJUkEIswIsML"
-   target="_blank"
-   rel="noopener noreferrer"
-   class="social-link youtube"
-   title="YouTube" aria-label="YouTube">
-  <i class="fab fa-youtube" aria-hidden="true"></i>
+<a href="YOUR_YOUTUBE_LINK" target="_blank" class="social-link youtube">
+<i class="fab fa-youtube"></i>
 </a>
 
-</nav>
+</div>
 
 <!-- ==========================
 HERO
-========================= -->
+========================== -->
 
-<section class="hero container">
+<section class="hero">
 
 <h1
 id="hero-title"
@@ -998,3 +974,602 @@ PST SYSTEM
 
 </h1>
 
+<h2
+id="hero-subtitle"
+data-en="11 Years of Trading Experience Engineered Into One Intelligent Trading System."
+data-fa="۱۱ سال تجربه معامله‌گری، تبدیل شده به یک سیستم هوشمند.">
+
+11 Years of Trading Experience Engineered Into One Intelligent Trading System.
+
+</h2>
+
+<p
+class="subtitle"
+id="hero-description"
+data-en="Professional trading software designed to remove emotions from decision making and help traders achieve consistent market analysis."
+data-fa="یک سیستم معاملاتی حرفه‌ای که احساسات را از معاملات حذف کرده و تصمیم‌گیری را بر پایه منطق و تحلیل انجام می‌دهد.">
+
+Professional trading software designed to remove emotions from decision making and help traders achieve consistent market analysis.
+
+</p>
+
+<a
+href="#buy-section"
+class="cta-btn"
+id="buyButton"
+data-en="Buy PST License"
+data-fa="خرید لایسنس PST">
+
+<i class="fas fa-shopping-cart"></i>
+
+<span id="buy-text">
+Buy PST License
+</span>
+
+</a>
+
+</section>
+
+<!-- ==========================
+START CONTAINER
+========================== -->
+
+<div class="container">
+   <!-- ==========================
+REAL ANALYSIS
+========================== -->
+
+<div class="glass-card">
+
+<h2
+class="section-title"
+id="analysis-title"
+data-en="Real Market Analysis Using PST"
+data-fa="نمونه تحلیل واقعی با PST">
+
+<i class="fas fa-chart-area"></i>
+
+<span>Real Market Analysis Using PST</span>
+
+</h2>
+
+<p
+id="analysis-desc"
+data-en="This example demonstrates how PST combines multiple layers of market confirmation to identify high-probability trading opportunities instead of relying on a single indicator."
+data-fa="این مثال نشان می‌دهد PST چگونه با ترکیب چند لایه تحلیل، نقاط ورود با احتمال موفقیت بالا را شناسایی می‌کند.">
+
+This example demonstrates how PST combines multiple layers of market confirmation to identify high-probability trading opportunities instead of relying on a single indicator.
+
+</p>
+
+<img
+src="ChatGPT Image ۵ تیر ۱۴۰۵، ۰۷_۱۰_۴۳.png"
+style="width:100%;border-radius:18px;margin:30px 0;"
+alt="PST Analysis">
+
+<div class="analysis-card">
+
+<h3
+data-en="1. Multi-Layer Confirmation"
+data-fa="۱. تایید چندلایه">
+
+1. Multi-Layer Confirmation
+
+</h3>
+
+<p
+data-en="The higher timeframe confirms the trend, the medium timeframe validates momentum, and the lower timeframe provides the exact entry point."
+data-fa="تایم‌فریم بزرگ روند را تایید می‌کند، تایم میانی قدرت حرکت را بررسی می‌کند و تایم پایین نقطه ورود را مشخص می‌کند.">
+
+The higher timeframe confirms the trend, the medium timeframe validates momentum, and the lower timeframe provides the exact entry point.
+
+</p>
+
+</div>
+
+<div class="analysis-card">
+
+<h3
+data-en="2. False Signal Filtering"
+data-fa="۲. حذف سیگنال‌های اشتباه">
+
+2. False Signal Filtering
+
+</h3>
+
+<p
+data-en="PST ignores weak breakouts by checking EMA alignment, RSI strength and overall market structure before generating a signal."
+data-fa="PST با بررسی EMA، قدرت RSI و ساختار بازار، شکست‌های ضعیف را فیلتر می‌کند.">
+
+PST ignores weak breakouts by checking EMA alignment, RSI strength and overall market structure before generating a signal.
+
+</p>
+
+</div>
+
+<div class="analysis-card">
+
+<h3
+data-en="3. Intelligent Exit"
+data-fa="۳. خروج هوشمند">
+
+3. Intelligent Exit
+
+</h3>
+
+<p
+data-en="Instead of waiting for a complete reversal, PST detects early weakness and helps secure profits before momentum disappears."
+data-fa="PST قبل از برگشت کامل بازار، نشانه‌های ضعف را تشخیص داده و به حفظ سود کمک می‌کند.">
+
+Instead of waiting for a complete reversal, PST detects early weakness and helps secure profits before momentum disappears.
+
+</p>
+
+</div>
+
+</div>
+   <!-- ==========================
+PST INTRODUCTION
+========================== -->
+
+<div class="glass-card">
+
+<img
+src="image_1770344258582316.png"
+alt="PST Indicator"
+style="width:100%;border-radius:18px;margin-bottom:30px;">
+
+<h2
+class="section-title"
+data-en="What Is PST?"
+data-fa="اندیکاتور PST چیست؟">
+
+<i class="fas fa-chart-line"></i>
+
+<span>What Is PST?</span>
+
+</h2>
+
+<p
+data-en="PST is the result of more than 11 years of trading experience combined with artificial intelligence. Instead of producing random buy and sell signals, it evaluates market structure, momentum, trend strength and multiple confirmations to generate logical trading opportunities."
+data-fa="PST نتیجه بیش از ۱۱ سال تجربه معامله‌گری است که با کمک هوش مصنوعی به یک سیستم معاملاتی تبدیل شده است. این سیستم به جای تولید سیگنال‌های تصادفی، ساختار بازار، قدرت روند، مومنتوم و چندین فیلتر حرفه‌ای را بررسی می‌کند تا بهترین فرصت‌های معاملاتی را پیدا کند.">
+
+PST is the result of more than 11 years of trading experience combined with artificial intelligence.
+
+</p>
+
+<div style="text-align:center;margin-top:35px;">
+
+<a
+href="#video-section"
+class="cta-btn"
+data-en="Watch Full Tutorial"
+data-fa="مشاهده آموزش کامل">
+
+<i class="fab fa-youtube"></i>
+
+<span>Watch Full Tutorial</span>
+
+</a>
+
+</div>
+
+</div>
+
+<!-- ==========================
+VIDEO
+========================== -->
+
+<div
+class="glass-card"
+id="video-section">
+
+<h2
+class="section-title"
+data-en="How PST Works"
+data-fa="نحوه عملکرد PST">
+
+<i class="fab fa-youtube"></i>
+
+<span>How PST Works</span>
+
+</h2>
+
+<p
+style="margin-bottom:25px;"
+data-en="Before purchasing PST, watch the complete presentation where I explain how the system was developed and how it should be used."
+data-fa="قبل از خرید PST این ویدیو را کامل مشاهده کنید تا با نحوه ساخت سیستم و شیوه استفاده صحیح از آن آشنا شوید.">
+
+Before purchasing PST, watch the complete presentation.
+
+</p>
+
+<div class="video-wrapper">
+
+<iframe
+src="https://www.youtube.com/embed/ID_VIDEO_YOURSELF"
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+</div>
+   <!-- ==========================
+BUY SECTION
+========================== -->
+
+<div
+id="buy-section"
+class="glass-card">
+
+<h2
+class="section-title"
+style="justify-content:center;"
+data-en="Get Your PST License"
+data-fa="دریافت لایسنس PST">
+
+<i class="fas fa-gem"></i>
+
+<span>Get Your PST License</span>
+
+</h2>
+
+<div class="pricing-grid">
+
+<div class="price-box glass-card">
+
+<div class="price-amount">
+
+299$
+
+</div>
+
+<div
+class="price-label"
+data-en="Lifetime License"
+data-fa="لایسنس دائمی">
+
+Lifetime License
+
+</div>
+
+<p
+style="color:var(--text-muted);"
+data-en="One payment. Lifetime access. No monthly subscription."
+data-fa="فقط یک بار پرداخت کنید و همیشه از PST استفاده کنید.">
+
+One payment. Lifetime access.
+
+</p>
+
+</div>
+
+<div>
+
+<h3
+data-en="Included In Your Purchase"
+data-fa="آنچه دریافت می‌کنید">
+
+Included In Your Purchase
+
+</h3>
+
+<ul class="package-list">
+
+<li>
+
+<i class="fas fa-check-circle"></i>
+
+<span
+data-en="Original PST Indicator"
+data-fa="فایل اصلی اندیکاتور PST">
+
+Original PST Indicator
+
+</span>
+
+</li>
+
+<li>
+
+<i class="fas fa-check-circle"></i>
+
+<span
+data-en="Installation Guide"
+data-fa="آموزش نصب کامل">
+
+Installation Guide
+
+</span>
+
+</li>
+
+<li>
+
+<i class="fas fa-check-circle"></i>
+
+<span
+data-en="Private Training Video"
+data-fa="ویدیوی آموزشی اختصاصی">
+
+Private Training Video
+
+</span>
+
+</li>
+
+<li>
+
+<i class="fas fa-check-circle"></i>
+
+<span
+data-en="Risk Management Rules"
+data-fa="قوانین مدیریت سرمایه">
+
+Risk Management Rules
+
+</span>
+
+</li>
+
+<li>
+
+<i class="fas fa-times-circle"
+style="color:var(--red);"></i>
+
+<span
+data-en="No Personal Mentoring Included"
+data-fa="پشتیبانی خصوصی شامل این نسخه نیست">
+
+No Personal Mentoring Included
+
+</span>
+
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="buy-box">
+
+<h2
+data-en="Purchase PST Securely"
+data-fa="خرید امن PST">
+
+Purchase PST Securely
+
+</h2>
+
+<a
+href="https://cryplink.io/mehrad_irania/DD1ydCwHeVic-6UNuh9nXw"
+target="_blank"
+class="buy-link"
+data-en="Buy Now"
+data-fa="خرید اکنون">
+
+Buy Now
+
+</a>
+
+<p
+class="price-text"
+data-en="Price: $299 USD"
+data-fa="قیمت: ۲۹۹ دلار">
+
+Price:
+<span>$299 USD</span>
+
+</p>
+
+</div>
+
+</div>
+   <!-- ==========================
+PST LOGIC
+========================== -->
+
+<div class="glass-card">
+
+<h2
+class="section-title"
+data-en="How PST Makes Decisions"
+data-fa="منطق تصمیم‌گیری PST">
+
+<i class="fas fa-layer-group"></i>
+
+<span>How PST Makes Decisions</span>
+
+</h2>
+
+<p
+data-en="PST is not a simple indicator. It is a complete decision-making framework that combines market structure, trend analysis, momentum, volatility, EMA alignment and RSI confirmation into one intelligent scoring system."
+data-fa="PST فقط یک اندیکاتور نیست. این سیستم با ترکیب ساختار بازار، روند، مومنتوم، نوسانات، EMA و RSI یک امتیاز نهایی برای کیفیت معامله تولید می‌کند.">
+
+PST is not a simple indicator. It is a complete decision-making framework.
+
+</p>
+
+<div class="info-grid">
+
+<div class="info-box" style="border-left:4px solid var(--green);">
+
+<h3 style="color:var(--green);">
+
+HIGH SCORE
+
+</h3>
+
+<p
+data-en="Multiple confirmations are aligned. Trend is healthy. Momentum supports continuation. Risk remains controlled."
+data-fa="چندین تایید همزمان وجود دارد. روند سالم است. مومنتوم تایید می‌شود و ریسک کنترل شده باقی می‌ماند.">
+
+Multiple confirmations are aligned.
+
+</p>
+
+</div>
+
+<div class="info-box" style="border-left:4px solid var(--red);">
+
+<h3 style="color:var(--red);">
+
+LOW SCORE
+
+</h3>
+
+<p
+data-en="Weak momentum or conflicting market conditions. PST ignores low-quality setups instead of forcing unnecessary trades."
+data-fa="قدرت بازار کافی نیست یا شرایط متناقض است. PST معاملات ضعیف را حذف می‌کند تا از ورودهای بی‌کیفیت جلوگیری شود.">
+
+Weak market conditions.
+
+</p>
+
+</div>
+
+</div>
+
+<div style="margin-top:35px;padding:20px;border-radius:15px;background:rgba(255,59,59,.08);border-left:4px solid var(--red);">
+
+<strong
+data-en="Risk Disclaimer"
+data-fa="هشدار ریسک">
+
+Risk Disclaimer
+
+</strong>
+
+<p
+style="margin-top:10px;"
+data-en="Trading always involves financial risk. PST increases decision quality but cannot guarantee profits. Every trader remains responsible for their own capital management."
+data-fa="تمام معاملات بازارهای مالی دارای ریسک هستند. PST کیفیت تصمیم‌گیری را افزایش می‌دهد اما سود را تضمین نمی‌کند. مسئولیت مدیریت سرمایه کاملاً بر عهده معامله‌گر است.">
+
+Trading always involves financial risk.
+
+</p>
+
+</div>
+
+</div>
+
+<!-- ==========================
+ABOUT CREATOR
+========================== -->
+
+<div class="glass-card">
+
+<div class="bio-container">
+
+<div class="bio-text">
+
+<h2
+data-en="Meet The Creator"
+data-fa="درباره سازنده">
+
+<i class="fas fa-user-astronaut" style="color:var(--gold);margin-right:10px;"></i>
+
+Meet The Creator
+
+</h2>
+
+<p
+data-en="My name is Mehrad Irani. I have spent more than eleven years studying price behavior, testing strategies and refining trading logic. PST is the result of thousands of hours of research transformed into practical software."
+data-fa="من مهراد ایرانی هستم. بیش از یازده سال از زندگی خود را صرف مطالعه رفتار قیمت، آزمایش استراتژی‌ها و توسعه منطق معاملاتی کرده‌ام. PST نتیجه هزاران ساعت تحقیق و تجربه واقعی بازار است.">
+
+My name is Mehrad Irani...
+
+</p>
+
+</div>
+
+<div class="quote-box">
+
+<i class="fas fa-quote-right"></i>
+
+<p
+data-en='"History remembers those who shine brightest when the world becomes darkest."'
+data-fa='"ستارگان بزرگ تاریخ، در تاریک‌ترین شب‌ها می‌درخشند."'
+style="font-style:italic;">
+
+"History remembers those who shine brightest when the world becomes darkest."
+
+</p>
+
+<div style="margin-top:20px;color:var(--gold);">
+
+<strong>Mehrad Irani</strong>
+
+<br>
+
+PST Creator
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<footer>
+
+<p>
+
+© 2026 PST SYSTEM
+
+</p>
+
+<p
+data-en="Developed by Mehrad Irani. All Rights Reserved."
+data-fa="طراحی و توسعه توسط مهراد ایرانی. تمامی حقوق محفوظ است.">
+
+Developed by Mehrad Irani. All Rights Reserved.
+
+</p>
+
+</footer>
+
+<script>
+
+const langBtn=document.getElementById("langToggle");
+
+function setLanguage(lang){
+
+document.documentElement.lang=lang;
+
+document.documentElement.dir=lang==="fa"?"rtl":"ltr";
+
+localStorage.setItem("language",lang);
+
+langBtn.innerHTML=lang==="en"
+?"🇮🇷 فارسی"
+:"🇺🇸 English";
+
+document.querySelectorAll("[data-en]").forEach(el=>{
+
+el.innerHTML=el.dataset[lang];
+
+});
+
+}
+
+let currentLang=localStorage.getItem("language")||"en";
+
+setLanguage(currentLang);
+
+langBtn.addEventListener("click",()=>{
+
+currentLang=currentLang==="en"?"fa":"en";
+
+setLanguage(currentLang);
+
+});
+
+</script>
+
+</body>
+
+</html>
